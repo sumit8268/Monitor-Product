@@ -1,0 +1,100 @@
+body{
+  padding:0;
+  margin:0;
+  background-color: rgba(150, 150, 150, 0.5);
+}
+
+.hea{
+  background:#22242a;
+  width:100%;
+  height: 60px;
+  overflow: hidden;
+}
+
+.logo{
+  width:auto;
+  float: left;
+}
+
+.logo h1{
+  color:white;
+  margin: 0;
+  padding-left: 30px;
+  padding-top: 15px;
+  width:auto;
+
+}
+
+.menu a{
+  color:white;
+  text-decoration: none;
+  padding-right: 20px;
+  float:right;
+  padding: 20px 20px;
+  font-family: 'Tomorrow', sans-serif;
+  font-size: 15px;
+  display: block;
+}
+
+.menu a:hover{
+  background: #00ff00;
+  color: #000000;
+}
+.menu{
+  padding-right: 30px;
+}
+
+body h2{
+  color:#00264d;
+  text-align: center;
+  padding-top: 150px;
+  font-size: 30px;
+}
+
+body .serdiv{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 45px;
+  width: 650px;
+  border-radius: 20px;
+  text-indent: 20px;
+  font-size: 20px;
+  font-family: 'Segoe UI', 'Roboto', arial, sans-serif;
+  text-decoration: none;
+
+
+
+
+
+    position: relative;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+
+    text-shadow: none;
+
+
+    background-color: white;
+
+    cursor: text;
+    font: 400 13.3333px Arial;
+    border-width: 0;
+
+    border-color: rgba(150, 150, 150, 0.5);;
+
+}
+
+body .search{
+  width: 60%;
+  border:white;
+  height: 43px;
+  color: black;
+  font-size: 20px;
+  position: relative;
+}
+
+
+.search:focus{
+  outline: none;
+}
