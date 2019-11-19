@@ -16,11 +16,17 @@ body{
   float: left;
 }
 
+.logo span{
+  color:red;
+  font-size: 40px;
+}
+
+
 .logo h1{
   color:white;
   margin: 0;
   padding-left: 30px;
-  padding-top: 15px;
+  padding-top: 6px;
   width:auto;
 
 }
@@ -34,6 +40,17 @@ body{
   font-family: 'Tomorrow', sans-serif;
   font-size: 15px;
   display: block;
+  border: 1px solid #22242a;
+}
+
+.hom {
+  background: #00ff00;
+  color: #000000;
+}
+
+.pro{
+  background: #00ff00;
+  color: #000000;
 }
 
 .menu a:hover{
@@ -43,6 +60,7 @@ body{
 .menu{
   padding-right: 30px;
 }
+
 
 body h2{
   color:#00264d;
@@ -62,11 +80,6 @@ body .serdiv{
   font-size: 20px;
   font-family: 'Segoe UI', 'Roboto', arial, sans-serif;
   text-decoration: none;
-
-
-
-
-
     position: relative;
     letter-spacing: normal;
     word-spacing: normal;
@@ -81,7 +94,7 @@ body .serdiv{
     font: 400 13.3333px Arial;
     border-width: 0;
 
-    border-color: rgba(150, 150, 150, 0.5);;
+    border-color: rgba(150, 150, 150, 0.5);
 
 }
 
@@ -97,4 +110,249 @@ body .search{
 
 .search:focus{
   outline: none;
+}
+
+
+
+body{
+background-color: #9CD2B5;
+}
+
+
+.user {
+  width: 350px;
+  height: 350px;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #22242a;
+  padding: 20px 20px;
+  position: absolute;
+  text-align: center;
+  border-radius: 15px;
+  padding-top: 30px;
+}
+
+
+.profile {
+  width: 350px;
+  height: 400px;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #22242a;
+  padding: 20px 20px;
+  position: absolute;
+  text-align: center;
+  border-radius: 15px;
+  padding-top: 30px;
+}
+
+
+.user input{
+  margin: 10px 10px;
+  width: auto;
+  padding: 15px 10px;
+  background: none;
+  border: 2px solid yellow;
+  text-align: center;
+  border-radius: 15px;
+  color: white;
+
+}
+
+
+.profile input{
+  margin: 10px 10px;
+  padding: 15px 10px;
+  background: none;
+  border-color: #00ff00;
+  width: 250px;
+  text-align: center;
+  border-radius: 15px;
+  color: white;
+
+}
+
+.sign input{
+  margin: 10px 10px;
+  width: auto;
+  height: auto;
+  padding: 15px 10px;
+  background: none;
+  border: 2px solid yellow;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+
+}
+
+.user input:focus{
+  outline: none;
+}
+
+.profile input:focus{
+  outline: none;
+}
+
+
+.sign input:focus{
+  outline: none;
+}
+
+
+
+
+.user input[type="text"]:focus,input[type="password"]:focus,input[type="tel"]:focus{
+  border-color: #00ff00;
+  width: 250px;
+  transition: 2s;
+    transition-property: width;
+    text-align: center;
+}
+
+.sign input[type="text"]:focus,input[type="password"]:focus{
+  border-color: #00ff00;
+  width: 250px;
+  transition: 2s;
+    transition-property: width;
+    text-align: center;
+    background: none;
+}
+
+.profile input[type="text"]:focus,input[type="tel"]:focus{
+  border-color: yellow;
+  width: 250px;
+    text-align: center;
+    background: none;
+}
+
+
+
+.user span{
+  font-size: 15px;
+  padding: 20px 20px;
+}
+
+.profile span{
+  font-size: 15px;
+  padding: 20px 20px;
+}
+
+.sign span{
+  font-size: 15px;
+  padding: 20px 20px;
+}
+
+
+.user button{
+
+  padding: 10px 17px;
+  border-radius: 15px;
+  background: none;
+  color: white;
+  border-color: green;
+  box-shadow: 1px 1px 1px green;
+}
+
+
+.profile button{
+
+  padding: 10px 17px;
+  border-radius: 15px;
+  background: none;
+  color: white;
+  border-color: green;
+  box-shadow: 1px 1px 1px green;
+}
+
+
+.sign button{
+
+  padding: 10px 17px;
+  border-radius: 15px;
+  background: none;
+  color: white;
+  border-color: green;
+  box-shadow: 1px 1px 1px green;
+}
+
+.user button:focus{
+  outline: none;
+}
+
+.profile button:focus{
+  outline: none;
+}
+
+.sign button:focus{
+  outline: none;
+}
+
+.user button:hover{
+  background: #00ff00;
+  color: black;
+  font-weight: bold;
+}
+
+.profile button:hover{
+  background: #00ff00;
+  color: black;
+  font-weight: bold;
+}
+
+
+.sign button:hover{
+  background: #00ff00;
+  color: black;
+  font-weight: bold;
+}
+
+.user a{
+  font-size: 15px;
+  color: white;
+}
+
+.profile a{
+  font-size: 15px;
+  color: white;
+}
+
+.user a:hover{
+  color: #0000ff;
+}
+
+.profile a:hover{
+  color: #0000ff;
+}
+
+
+.sign a{
+  font-size: 15px;
+  color: white;
+}
+
+.sign a:hover{
+  color: #0000ff;
+}
+
+
+
+.sign{
+    width: 350px;
+    height: auto;
+    color: white;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #22242a;
+    padding: 20px 20px;
+    position: absolute;
+    text-align: center;
+    border-radius: 15px;
+    padding-top: 30px;
 }
