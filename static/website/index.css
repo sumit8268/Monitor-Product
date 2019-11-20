@@ -151,6 +151,25 @@ background-color: #9CD2B5;
 }
 
 
+.fpass,.npass {
+  width: 300px;
+  height: auto;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #22242a;
+  padding: 20px 20px;
+  position: absolute;
+  text-align: center;
+  border-radius: 15px;
+  padding-top: 30px;
+}
+
+
+
+
+
 .user input{
   margin: 10px 10px;
   width: auto;
@@ -176,6 +195,19 @@ background-color: #9CD2B5;
 
 }
 
+.fpass,.npass input{
+  margin: 10px 10px;
+  width: auto;
+  padding: 15px 10px;
+  background: none;
+  border: 2px solid yellow;
+  text-align: center;
+  border-radius: 15px;
+  color: white;
+
+}
+
+
 .sign input{
   margin: 10px 10px;
   width: auto;
@@ -193,6 +225,10 @@ background-color: #9CD2B5;
   outline: none;
 }
 
+.fpass,.npass input:focus{
+  outline: none;
+}
+
 .profile input:focus{
   outline: none;
 }
@@ -202,8 +238,13 @@ background-color: #9CD2B5;
   outline: none;
 }
 
-
-
+.npass input[type="text"]:focus,input[type="password"]:focus{
+  border-color: #00ff00;
+  width: 250px;
+  transition: 2s;
+    transition-property: width;
+    text-align: center;
+}
 
 .user input[type="text"]:focus,input[type="password"]:focus,input[type="tel"]:focus{
   border-color: #00ff00;
@@ -212,6 +253,16 @@ background-color: #9CD2B5;
     transition-property: width;
     text-align: center;
 }
+
+
+.fpass input[type="text"]:focus{
+  border-color: #00ff00;
+  width: 250px;
+  transition: 2s;
+    transition-property: width;
+    text-align: center;
+}
+
 
 .sign input[type="text"]:focus,input[type="password"]:focus{
   border-color: #00ff00;
@@ -236,6 +287,11 @@ background-color: #9CD2B5;
   padding: 20px 20px;
 }
 
+.fpass,.npass span{
+  font-size: 15px;
+  padding: 20px 20px;
+}
+
 .profile span{
   font-size: 15px;
   padding: 20px 20px;
@@ -248,6 +304,27 @@ background-color: #9CD2B5;
 
 
 .user button{
+
+  padding: 10px 17px;
+  border-radius: 15px;
+  background: none;
+  color: white;
+  border-color: green;
+  box-shadow: 1px 1px 1px green;
+}
+
+.npass button{
+
+  padding: 10px 17px;
+  border-radius: 15px;
+  background: none;
+  color: white;
+  border-color: green;
+  box-shadow: 1px 1px 1px green;
+}
+
+
+.fpass button{
 
   padding: 10px 17px;
   border-radius: 15px;
@@ -279,7 +356,11 @@ background-color: #9CD2B5;
   box-shadow: 1px 1px 1px green;
 }
 
-.user button:focus{
+.user,.npass button:focus{
+  outline: none;
+}
+
+.fpass button:focus{
   outline: none;
 }
 
@@ -291,7 +372,13 @@ background-color: #9CD2B5;
   outline: none;
 }
 
-.user button:hover{
+.user,.npass button:hover{
+  background: #00ff00;
+  color: black;
+  font-weight: bold;
+}
+
+.fpass button:hover{
   background: #00ff00;
   color: black;
   font-weight: bold;
