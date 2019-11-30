@@ -12,19 +12,19 @@
         </div>
 
         <div class="menu">
-          <a href="#">About Us</a>
-          <a href="#">Sites</a>
+          <a href="#" style="display:none;">About Us</a>
+          <a href="#" style="display:none;">Sites</a>
         </div>
       </div>
 
 
 
 
-      <form class="user" method="post">
+      <form class="user" style=".user button:hover{color: black;font-weight: bold;}" method="post">
         <span>Username:</span> <br><input type="text" name="user" placeholder="Enter email id:"><br><br>
         <span>Password:</span> <br><input type="password" name="pas" placeholder="Enter password:"><br><br>
         <button type="submit" name="login">LOG IN</button><br><br><br>
-        <a href="{{ url_for('signup')}}">Create new account?</a><a href="#" style="padding-left:15px;">Forgot Password?</a>
+        <a href="{{ url_for('signup')}}">Create new account?</a><a href="{{ url_for('forgetpass') }}" style="padding-left:15px;">Forgot Password?</a>
       </form>
   </body>
 </html>

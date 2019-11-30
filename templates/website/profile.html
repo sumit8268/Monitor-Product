@@ -14,10 +14,11 @@
 <h1><span>P</span>RICE   <span style="padding-left:10px;">T</span>AG</h1>        </div>
 
         <div class="menu">
-          <a href="#">About Us</a>
-          <a href="#">Sites</a>
+          <a href="#" style="display:none;">About Us</a>
+          <a href="#" style="display:none;">Sites</a>
+            <a href="{{ url_for('login') }}" >Log Out</a>
           <a href="{{ url_for('profile')}}" class="pro">Profile</a>
-          <a href="#">Dashboard</a>
+          <a href="{{ url_for('dashboard') }}">Dashboard</a>
           <a href="{{ url_for('home')}}">Home</a>
         </div>
       </div>
@@ -34,7 +35,7 @@
         document.getElementById('edit').style.display = 'none';">Edit Profile</button>
         <button type="submit" name="confirm" id="confirm" style="display:none;margin-left:135px;">Confirm</button>
         <br><br>
-        <a href="#">Change Password</a>
+        <a href="{{ url_for('forgetpass') }}">Change Password</a>
       </form>
 
   </body>

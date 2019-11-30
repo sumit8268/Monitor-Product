@@ -31,6 +31,32 @@ body{
 
 }
 
+table{
+    border:4px solid black;
+    margin-top: 20px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    background: white;
+}
+
+table tr{
+    padding: 20px 20px;
+
+}
+
+table tr th{
+    border: 1px solid black;
+    font-family: 'Tomorrow', sans-serif;
+}
+
+table tr td{
+    border:2px solid black;
+    font-family: 'Tomorrow', sans-serif;
+    padding: 10px 10px;
+}
+
+
+
 .menu a{
   color:white;
   text-decoration: none;
@@ -44,6 +70,11 @@ body{
 }
 
 .hom {
+  background: #00ff00;
+  color: #000000;
+}
+
+.dash {
   background: #00ff00;
   color: #000000;
 }
@@ -99,7 +130,7 @@ body .serdiv{
 }
 
 body .search{
-  width: 60%;
+  width: 93%;
   border:white;
   height: 43px;
   color: black;
@@ -150,8 +181,7 @@ background-color: #9CD2B5;
   padding-top: 30px;
 }
 
-
-.fpass,.npass {
+.npass {
   width: 300px;
   height: auto;
   color: white;
@@ -166,6 +196,21 @@ background-color: #9CD2B5;
   padding-top: 30px;
 }
 
+
+.fpass {
+  width: 300px;
+  height: auto;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #22242a;
+  padding: 20px 20px;
+  position: absolute;
+  text-align: center;
+  border-radius: 15px;
+  padding-top: 30px;
+}
 
 
 
@@ -195,7 +240,20 @@ background-color: #9CD2B5;
 
 }
 
-.fpass,.npass input{
+.npass input{
+  margin: 10px 10px;
+  width: auto;
+  padding: 15px 10px;
+  background: none;
+  border: 2px solid yellow;
+  text-align: center;
+  border-radius: 15px;
+  color: white;
+
+}
+
+
+.fpass input{
   margin: 10px 10px;
   width: auto;
   padding: 15px 10px;
@@ -225,7 +283,11 @@ background-color: #9CD2B5;
   outline: none;
 }
 
-.fpass,.npass input:focus{
+.npass input:focus{
+  outline: none;
+}
+
+.fpass input:focus{
   outline: none;
 }
 
@@ -280,14 +342,21 @@ background-color: #9CD2B5;
     background: none;
 }
 
-
+.search{
+width: 100%;
+}
 
 .user span{
   font-size: 15px;
   padding: 20px 20px;
 }
 
-.fpass,.npass span{
+.npass span{
+  font-size: 15px;
+  padding: 20px 20px;
+}
+
+.fpass span{
   font-size: 15px;
   padding: 20px 20px;
 }
@@ -356,7 +425,7 @@ background-color: #9CD2B5;
   box-shadow: 1px 1px 1px green;
 }
 
-.user,.npass button:focus{
+.user button:focus,.npass button:focus{
   outline: none;
 }
 
@@ -372,17 +441,26 @@ background-color: #9CD2B5;
   outline: none;
 }
 
-.user,.npass button:hover{
-  background: #00ff00;
-  color: black;
-  font-weight: bold;
-}
 
 .fpass button:hover{
   background: #00ff00;
   color: black;
   font-weight: bold;
 }
+
+.user button:hover{
+  background: #00ff00;
+  color: black;
+  font-weight: bold;
+}
+
+.npass button:hover{
+  background: #00ff00;
+  color: black;
+  font-weight: bold;
+}
+
+
 
 .profile button:hover{
   background: #00ff00;

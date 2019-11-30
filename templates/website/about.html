@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>about</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='website/index.css') }}">
+</head>
+<body>
+
+
+    s<header>
+      <div class="hea">
+        <div class="logo">
+<h1><span>P</span>RICE   <span style="padding-left:10px;">T</span>AG</h1>        </div>
+
+        <div class="menu">
+         <a href="#" style="display:none;">About Us</a>
+          <a href="#" style="display:none;">Sites</a>
+          <a href="{{ url_for('profile')}}">Profile</a>
+          <a href="#">Dashboard</a>
+          <a href="{{ url_for('home')}}" class="hom">Home</a>
+        </div>
+      </div>
+    </header>
+
+
+</body>
+</html>

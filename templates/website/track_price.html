@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Home</title>
+    <title>Track_Price</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='website/index.css') }}">
 
     <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
@@ -17,37 +17,31 @@
         <div class="menu">
           <a href="#" style="display:none;">About Us</a>
           <a href="#" style="display:none;">Sites</a>
-            <a href="{{ url_for('login') }}" >Log Out</a>
           <a href="{{ url_for('profile')}}">Profile</a>
-          <a href="{{ url_for('dashboard') }}">Dashboard</a>
+          <a href="#">Dashboard</a>
           <a href="{{ url_for('home')}}" class="hom">Home</a>
         </div>
       </div>
     </header>
 
-    <form method="post">
-    <h2>Search Products</h2>
-    <br>
-    <div class="serdiv">
-    <input class="search" type="text" name="search" placeholder="Paste The Product URL  And Press Enter" autocomplete="off" tabindex="-1" aria-hidden="true">
-    </div>
+
+
 <table id="flashmsg">
     <tr rowspan=2>
   {% with msg = get_flashed_messages() %}
             {% if msg %}
-                {% for i in range(4) %}
+                {% for i in range(5) %}
                     {% if i == 1 %}
                      <td name="{{ msg[i] }}"><input type="hidden" name = "{{msg[i]}}" value="{{ msg[i] }}"/><img src='{{ msg[i] }}' style='width:110px;height:110px;'/></td>
                     {% else %}
                     <td name="{{ msg[i] }}"><input type="hidden" name="{{msg[i]}}" value="{{ msg[i] }}"/>{{msg[i]}}</td>
                     {% endif %}
                 {% endfor %}
-        <td><input type="number" name="dprice" placeholder="Enter desired price:" />Enter the desired price to track.</td>
-        <td><button type="submit" name="traceprice" onclick="{{ window }}">Track Price</button></td>
           {% endif %}
           {% endwith %}
     </tr>
 </table>
-    </form>
+
+
   </body>
 </html>

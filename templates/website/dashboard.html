@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='website/index.css') }}">
+</head>
+<body>
+       <header>
+      <div class="hea">
+        <div class="logo">
+<h1><span>P</span>RICE   <span style="padding-left:10px;">T</span>AG</h1>        </div>
+
+        <div class="menu">
+          <a href="#" style="display:none;">About Us</a>
+          <a href="#" style="display:none;">Sites</a>
+            <a href="{{ url_for('login') }}" >Log Out</a>
+          <a href="{{ url_for('profile')}}">Profile</a>
+          <a href="{{ url_for('dashboard') }}" class="dash">Dashboard</a>
+          <a href="{{ url_for('home') }}" >Home</a>
+        </div>
+      </div>
+    </header>
+
+<table>
+    <tr>
+    <th>Website</th>
+    <th>Product Image</th>
+    <th>Product Name</th>
+    <th>Product Initial Price</th>
+        <th>Desired Price</th>
+    <th>Product Price Right Now</th>
+    </tr>
+    <tr style="margin-top:20px;">
+                {% for i in range(l)%}
+                        {% if i in s1 %}
+                            {{ data[i] }}.com</a></td>
+                        {% elif i in s %}
+                            <td>Click here to go to the Product Page.<a href="{{ data[i] }}" target="_blank" style="font-size:15px;">
+                        {% elif i in m %}
+                            <td><img src="{{data[i]}}" style="height:110px;width=110px;"></td>
+                        {% elif data[i] == "next" %}
+                            </tr><tr style="margin-top:20px;">{{continue}}
+                        {% else %}
+                            <td>{{data[i]}}</td>
+                        {% endif %}
+                {% endfor %}
+</table>
+
+
+</body>
+</html>
