@@ -6,7 +6,6 @@ import pricescrap
 from apscheduler.schedulers.background import BackgroundScheduler
 
 
-
 app = Flask(__name__)
 
 db = yaml.load(open('db.yaml'))
@@ -115,37 +114,34 @@ img = ""
 @app.route("/home", methods=['POST', 'GET'])
 def home():
     global title, price, img, site, userd, url1
-    try:
-        if request.method == 'POST':
-            page = request.form
-            try:
-                url = page['search']
-                url1 = url
-                s, t, p, i, u = pricescrap.price(url)
-                site, title, price, img, url1 = s, t, p, i, u
-                flash(s)
-                flash(i)
-                flash(t)
-                flash(p)
-                return redirect(url_for('home', url=u))
-            except :
-                img1 = request.form[img]
-                site1 = request.form[site]
-                title1 = request.form[title]
-                price1 = request.form[price]
-                pr = price1[1:].replace(',','')
-                dprice = request.form['dprice']
-                u1 = request.args['url']
+    if request.method == 'POST':
+        page = request.form
+        try:
+            url = page['search']
+            url1 = url
+            s, t, p, i, u = pricescrap.price(url)
+            site, title, price, img, url1 = s, t, p, i, u
+            print(s, i, t, p)
+            flash(s)
+            flash(i)
+            flash(t)
+            flash(p)
+            return redirect(url_for('home', url=u))
+        except :
+            img1 = request.form[img]
+            site1 = request.form[site]
+            title1 = request.form[title]
+            price1 = request.form[price]
+            pr = price1[1:].replace(',','')
+            dprice = request.form['dprice']
+            u1 = request.args['url']
 
-                con = mysql.connection.cursor()
-                con.execute('insert into prod values("%s","%s","%s","%s","%s","%s","%s","%s")'%(userd, site1, u1, img1, title1, pr, dprice, pr))
-                mysql.connection.commit()
-                return redirect(url_for('dashboard'))
-                #return redirect(url_for('track_price', site=site1,img=img1,title=title1,price=pr,dprice=dprice))
-        elif request.method == 'GET':
-            return render_template("website/newindex.html")
-    except:
-        flash("!Something went wrong , Try Again...")
+            con = mysql.connection.cursor()
+            con.execute('insert into prod values("%s","%s","%s","%s","%s","%s","%s","%s")'%(userd, site1, u1, img1, title1, pr, dprice, pr))
+            mysql.connection.commit()
+            return redirect(url_for('dashboard'))
+            #return redirect(url_for('track_price', site=site1,img=img1,title=title1,price=pr,dprice=dprice))
+    elif request.method == 'GET':
         return render_template("website/newindex.html")
 
 @app.route("/sites")
